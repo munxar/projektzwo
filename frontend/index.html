@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <!-- system js module loader -->
+    <script src="lib/system.js/dist/system.js"></script>
+    <!-- system js configuration -->
+    <script src="config.js"></script>
+    <link rel="stylesheet" href="src/style.css">
+</head>
+<body ng-controller="AppCtrl as ctrl">
+    <h1>{{ctrl.message}}</h1>
+
+    <!-- load our app -->
+    <script>
+        System.import("src/main");
+    </script>
+</body>
+</html>

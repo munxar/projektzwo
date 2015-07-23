@@ -1,0 +1,35 @@
+{
+  "name": "projektzwo",
+  "version": "1.0.0",
+  "description": "DAS zweite Projekt",
+  "main": "void",
+  "scripts": {
+    "start": "gulp",
+    "test": "gulp test",
+    "postinstall": "bower install",
+    "clean": "gulp clean"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/munxar/projektzwo.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/munxar/projektzwo/issues"
+  },
+  "homepage": "https://github.com/munxar/projektzwo#readme",
+  "devDependencies": {
+    "browser-sync": "^2.8.0",
+    "del": "^1.2.0",
+    "gulp": "^3.9.0",
+    "gulp-sass": "^2.0.4",
+    "gulp-typescript": "^2.8.0",
+    "http-proxy-middleware": "^0.3.0",
+    "typescript": "^1.5.3"
+  },
+  "dependencies": {
+    "express": "^4.13.1",
+    "morgan": "^1.6.1"
+  }
+}

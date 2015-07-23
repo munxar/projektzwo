@@ -1,0 +1,22 @@
+{
+  "name": "projektzwo",
+  "version": "0.0.0",
+  "homepage": "https://github.com/munxar/projektzwo",
+  "authors": [
+    "Sascha Demirovic <munxar@gmx.de>",
+    "Dennis Garrn <dennis.garrn@?.ch>"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "frontend/lib",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "system.js": "~0.18.4",
+    "angular": "~1.4.3"
+  }
+}
