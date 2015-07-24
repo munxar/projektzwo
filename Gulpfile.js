@@ -45,6 +45,8 @@ var server = backend();
 gulp.task("serve", ["build:back", "build:front", "build:sass"], function(done) {
     var proxy = proxyMiddleware(config.api, { target: "http://127.0.0.1:" + config.port });
 
+    server.restart();
+
     // start browser sync server but redirect /api to backend
     browserSync.init({
         server: {
@@ -53,7 +55,6 @@ gulp.task("serve", ["build:back", "build:front", "build:sass"], function(done) {
         }
     });
 
-    server.restart();
     done();
 });
 
