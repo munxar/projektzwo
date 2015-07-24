@@ -1,12 +1,9 @@
-/**
- * Created by saschademirovic on 21.07.15.
- */
-
 var gulp = require("gulp");
 var browserSync = require("browser-sync").create();
 var proxyMiddleware = require("http-proxy-middleware");
 var ts = require("gulp-typescript");
 var sass = require("gulp-sass");
+var autoprefixer = require("gulp-autoprefixer");
 var typescript = require("typescript");
 var del = require("del");
 var spawn = require("child_process").spawn;
@@ -78,6 +75,10 @@ gulp.task("build:back", function() {
 
 gulp.task("build:sass", function() {
     return gulp.src(frontendSrc + "**/*.scss")
+        .pipe(autoprefixer({
+            browser: ["last 2 versions", "IE 9", "> 5%", "Firefox ESR"],
+            cascade: false
+        }))
         .pipe(sass().on("error", sass.logError))
         .pipe(gulp.dest(frontendSrc));
 });
