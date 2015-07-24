@@ -3,6 +3,7 @@ var browserSync = require("browser-sync").create();
 var proxyMiddleware = require("http-proxy-middleware");
 var ts = require("gulp-typescript");
 var sass = require("gulp-sass");
+var less = require("gulp-less");
 var autoprefixer = require("gulp-autoprefixer");
 var typescript = require("typescript");
 var del = require("del");
@@ -82,6 +83,16 @@ gulp.task("build:sass", function() {
         }))
         .pipe(sass().on("error", sass.logError))
         .pipe(gulp.dest(frontendSrc));
+});
+
+gulp.task("build:semantic", function() {
+    return gulp.src(baseDir + "/semantic-ui/semantic.less")
+        .pipe(autoprefixer({
+            browser: ["last 2 versions", "IE 9", "> 5%", "Firefox ESR"],
+            cascade: false
+        }))
+        .pipe(less())
+        .pipe(gulp.dest(baseDir+ "/semantic-ui"));
 });
 
 // watch typescript

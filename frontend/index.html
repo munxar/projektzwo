@@ -9,11 +9,27 @@
     <script src="config.js"></script>
     <!-- needed for ng-cloal -->
     <link rel="stylesheet" href="lib/angular/angular-csp.css">
+    <link rel="stylesheet" href="lib/semantic-ui/dist/semantic.css">
     <!-- out style sheets -->
     <link rel="stylesheet" href="src/style.css">
 </head>
 <body ng-controller="AppCtrl as ctrl">
-    <h1>{{ctrl.message}}</h1>
+
+    <div class="ui fixed menu">
+        <div class="header item">App</div>
+        <a href="#" class="item active">Home</a>
+        <a href="#" class="item">Bla</a>
+    </div>
+
+    <div class="ui main container">
+        <div class="ui breadcrumb">
+            <span>one</span>
+            <span class="divider">&gt;</span>
+            <span>two</span>
+            <span class="divider">&gt;</span>
+            <span>three</span>
+        </div>
+    </div>
 
     <!-- load our app -->
     <script>
