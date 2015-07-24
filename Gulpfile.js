@@ -10,11 +10,10 @@ var sass = require("gulp-sass");
 var typescript = require("typescript");
 var del = require("del");
 var spawn = require("child_process").spawn;
-
-var config = require("./backend/config");
+var config = require("./config");
 var baseDir = "./frontend";
 var frontendSrc = "frontend/src/";
-var backendSrc = "backend/src/";
+var backendSrc = "backend/";
 
 var tsFrontend = ts.createProject({
     typescript: typescript,
@@ -38,14 +37,8 @@ function backend() {
             if(server) {
                 server.kill("SIGKILL");
             }
-            server = spawn('node', [backendSrc + 'main.js']);
-            server.stdout.on('data', function (data) {
-                process.stdout.write(data);
-            });
-
-            server.stderr.on('data', function (data) {
-                process.stderr.write(data);
-            });
+            // spawn backend process, redirect stdio to gulp process
+            server = spawn('node', [backendSrc + "src/main.js"], { stdio: 'inherit' });
         }
     };
 }
@@ -91,15 +84,28 @@ gulp.task("build:sass", function() {
 
 // watch typescript
 gulp.task("watch", ["build:back", "build:front", "build:sass"], function() {
-    // watch all html, js and css files -> reload on change
-    gulp.watch([baseDir + "/**/*.html", baseDir + "/**/*.js", baseDir + "/**/*.css"]).on('change', browserSync.reload);
+
+    // watch ts files an trigger build chain
     gulp.watch([frontendSrc + "**/*.ts"], ["build:front"]);
     gulp.watch([frontendSrc + "**/*.scss"], ["build:sass"]);
     gulp.watch([backendSrc + "**/*.ts"], ["build:back"]);
-    gulp.watch([backendSrc + "**/*.js"]).on("change", function() {
-        server.restart();
-    });
+
+    // watch all html, js and css files -> reload browser on change
+    gulp.watch([baseDir + "/**/*.html", baseDir + "/**/*.js", baseDir + "/**/*.css"], once(browserSync.reload));
+
+    // on change of a backend js, restart backend
+    gulp.watch([backendSrc + "**/*.js"], once(server.restart));
 });
+
+// collect events, and start cb only once after a timeout
+function once(cb, timeout) {
+    timeout = timeout || 100;
+    var timer;
+    return function() {
+        clearTimeout(timer);
+        timer = setTimeout(cb, timeout);
+    }
+}
 
 // remove generated js files
 gulp.task("clean", function(done) {

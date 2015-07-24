@@ -4,5 +4,10 @@
 
 
 export class AppController {
-    message = "Hallo, Welt!";
+    message: string;
+
+    static $inject = ["$http"];
+    constructor($http) {
+        $http.get("/api").then(res => this.message = res.data.msg);
+    }
 }

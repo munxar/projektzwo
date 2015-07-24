@@ -28,7 +28,7 @@ node_modules
 frontend/lib
 frontend/src/**/*.js
 frontend/src/**/*.css
-backend/src/**/*.js
+backend/**/*.js
 .idea
 
 
