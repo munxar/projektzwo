@@ -1,12 +1,9 @@
-/**
- * Created by saschademirovic on 21.07.15.
- */
-
 var gulp = require("gulp");
 var browserSync = require("browser-sync").create();
 var proxyMiddleware = require("http-proxy-middleware");
 var ts = require("gulp-typescript");
 var sass = require("gulp-sass");
+var autoprefixer = require("gulp-autoprefixer");
 var typescript = require("typescript");
 var del = require("del");
 var spawn = require("child_process").spawn;
@@ -38,12 +35,12 @@ function backend() {
             if(server) {
                 server.kill("SIGKILL");
             }
-            server = spawn('node', [backendSrc + 'main.js']);
-            server.stdout.on('data', function (data) {
+            server = spawn("node", [backendSrc + "main.js"]);
+            server.stdout.on("data", function (data) {
                 process.stdout.write(data);
             });
 
-            server.stderr.on('data', function (data) {
+            server.stderr.on("data", function (data) {
                 process.stderr.write(data);
             });
         }
@@ -85,6 +82,10 @@ gulp.task("build:back", function() {
 
 gulp.task("build:sass", function() {
     return gulp.src(frontendSrc + "**/*.scss")
+        .pipe(autoprefixer({
+            browser: ["last 2 versions", "IE 9", "> 5%", "Firefox ESR"],
+            cascade: false
+        }))
         .pipe(sass().on("error", sass.logError))
         .pipe(gulp.dest(frontendSrc));
 });
@@ -92,7 +93,7 @@ gulp.task("build:sass", function() {
 // watch typescript
 gulp.task("watch", ["build:back", "build:front", "build:sass"], function() {
     // watch all html, js and css files -> reload on change
-    gulp.watch([baseDir + "/**/*.html", baseDir + "/**/*.js", baseDir + "/**/*.css"]).on('change', browserSync.reload);
+    gulp.watch([baseDir + "/**/*.html", baseDir + "/**/*.js", baseDir + "/**/*.css"]).on("change", browserSync.reload);
     gulp.watch([frontendSrc + "**/*.ts"], ["build:front"]);
     gulp.watch([frontendSrc + "**/*.scss"], ["build:sass"]);
     gulp.watch([backendSrc + "**/*.ts"], ["build:back"]);

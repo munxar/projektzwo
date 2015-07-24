@@ -13,7 +13,7 @@
     "type": "git",
     "url": "git+https://github.com/munxar/projektzwo.git"
   },
-  "author": "",
+  "author": "Sascha Aeppli, Dennis Garrn",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/munxar/projektzwo/issues"
@@ -23,12 +23,14 @@
     "browser-sync": "^2.8.0",
     "del": "^1.2.0",
     "gulp": "^3.9.0",
+    "gulp-autoprefixer": "^2.3.1",
     "gulp-sass": "^2.0.4",
     "gulp-typescript": "^2.8.0",
     "http-proxy-middleware": "^0.3.0",
     "typescript": "^1.5.3"
   },
   "dependencies": {
+    "angular": "^1.4.3",
     "express": "^4.13.1",
     "morgan": "^1.6.1"
   }
