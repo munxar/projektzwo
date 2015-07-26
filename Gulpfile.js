@@ -4,6 +4,7 @@ var proxyMiddleware = require("http-proxy-middleware");
 var ts = require("gulp-typescript");
 var sass = require("gulp-sass");
 var less = require("gulp-less");
+var mocha = require('gulp-mocha');
 var autoprefixer = require("gulp-autoprefixer");
 var typescript = require("typescript");
 var del = require("del");
@@ -43,10 +44,10 @@ function backend() {
 
 var server = backend();
 
-gulp.task("serve", ["build:back", "build:front", "build:sass"], function(done) {
+gulp.task("serve", ["build:back", "api", "build:front", "build:sass"], function(done) {
     var proxy = proxyMiddleware(config.api, { target: "http://127.0.0.1:" + config.port });
 
-    server.restart();
+    //server.restart();
 
     // start browser sync server but redirect /api to backend
     browserSync.init({
@@ -74,6 +75,10 @@ gulp.task("build:back", function() {
         .pipe(gulp.dest(backendSrc));
 });
 
+gulp.task("test:back", ["build:back", "api"], function() {
+    return gulp.src(backendSrc + "test/**/*.js", { read: false })
+        .pipe(mocha({}));
+});
 
 gulp.task("build:sass", function() {
     return gulp.src(frontendSrc + "**/*.scss")
@@ -101,13 +106,17 @@ gulp.task("watch", ["build:back", "build:front", "build:sass"], function() {
     // watch ts files an trigger build chain
     gulp.watch([frontendSrc + "**/*.ts"], ["build:front"]);
     gulp.watch([frontendSrc + "**/*.scss"], ["build:sass"]);
-    gulp.watch([backendSrc + "**/*.ts"], ["build:back"]);
+    gulp.watch([backendSrc + "**/*.ts"], ["build:back", "api", "test:back"]);
 
     // watch all html, js and css files -> reload browser on change
     gulp.watch([baseDir + "/**/*.html", baseDir + "/**/*.js", baseDir + "/**/*.css"], once(browserSync.reload));
 
     // on change of a backend js, restart backend
-    gulp.watch([backendSrc + "**/*.js"], once(server.restart));
+    //gulp.watch([backendSrc + "src/**/*.js"], once(server.restart));
+});
+
+gulp.task("api", ["build:back"], function() {
+    server.restart();
 });
 
 // collect events, and start cb only once after a timeout
