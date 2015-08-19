@@ -1,17 +1,8 @@
+# sudo - Das schnelle Sudoku mit Spass
+
+- Als Gast möchte ich ein klassisches Sudoku spielen können (9x9). Ich kann aus den Schwierigkeitsgraden einfach, mittel und schwer auswählen.
+- Als Gast kann ich mich registieren um ein User zu werden. Dazu gebe ich einen username und ein passwort ein.
+
 # Spielmodi
-
-- `offline modus` gegen computer
-- `fun` jemand per link einladen
-- `multiplayer` Fange bei 0 an und level dich gegen andere spieler hoch
-
-
-user: email, username, optional (firstname, lastname, birthdate, address, avatar)
-
-- user signup
-- user login
-
-Als Dennis möchte ich ein Profil, damit ich selber ein Event erstellen oder betreten kann.
-
-Als Sascha möchte ich meinen Profil und meine erstellten Event ansehen.
-
-Als Dennis möchte in meinem Profil ein Bild von mir haben, damit die Anderen wissen wer ich bin.
+- Als User kann ich mich mit username und passwort anmelden
+- Als User kann ich ein Sudoku spielen gegen einen anderen Spieler machen. Ein richtiges Feld gibt einen Plus ein falsches 2 Minuspunkte.
