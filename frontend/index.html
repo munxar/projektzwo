@@ -9,32 +9,31 @@
     <script src="config.js"></script>
     <!-- needed for ng-cloal -->
     <link rel="stylesheet" href="lib/angular/angular-csp.css">
-    <link rel="stylesheet" href="lib/semantic-ui/dist/semantic.css">
     <!-- out style sheets -->
     <link rel="stylesheet" href="src/style.css">
 </head>
 <body ng-controller="AppCtrl as ctrl">
+    <header>
+        <div class="menu">
+            <div class="header item">Sudoku</div>
+            <a href="#" class="item active">Home</a>
 
-    <div class="ui fixed menu">
-        <div class="header item">App</div>
-        <a href="#" class="item active">Home</a>
-        <a href="#" class="item">Bla</a>
-
-        <div class="right menu">
-            <a href="#" class="item">Login</a>
+            <div class="right menu">
+                <a href="#" class="item">Register</a> | 
+                <a href="#" class="item">Login</a>
+            </div>
         </div>
-    </div>
-
-
-    <div class="ui main container">
-        <div class="ui breadcrumb">
-            <a class="section">Home</a>
-            <div class="divider"> / </div>
-            <a class="section">Store</a>
-            <div class="divider"> / </div>
-            <div class="active section">T-Shirt</div>
+    </header>
+    <main>
+        <div class="container">
+          <h1>Welcome to Sudoku</h1>
+          <ul class="menu">
+              <li class="button">Single Player</li>
+              <li class="button">Multiplayer</li>
+              <li class="button">Options</li>
+          </ul>
         </div>
-    </div>
+    </main>
 
     <!-- load our app -->
     <script>

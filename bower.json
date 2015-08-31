@@ -17,7 +17,6 @@
   ],
   "dependencies": {
     "system.js": "~0.18.4",
-    "angular": "~1.4.3",
-    "semantic-ui": "~2.0.7"
+    "angular": "~1.4.3"
   }
 }
