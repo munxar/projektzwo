@@ -1,17 +1,16 @@
-$blue: #008eae;
-$red: #ff4252;
+@import 'globals';
 
 body {
-  background-color: #f6f6f6;
-  color: #fff;
-  font-family: Arial;
-  font-size: 16px;
-  margin: 0;
-  padding: 0;
+  background-color: $background;
 }
 
 main {
   margin: 10px;
+
+  @media (min-width: 600px) {
+    margin: 0 auto;
+    width: 900px;
+  }
 }
 
 h1 {
@@ -19,22 +18,17 @@ h1 {
 }
 
 header {
-  position: relative;
-}
 
-header .menu {
-  background-color: $blue;
-  padding: 10px;
-  color: #fff;
+ .menu {
+    background-color: $blue;
+    color: #fff;
+    padding: 10px;
+  }
 }
 
 a {
   color: #fff;
   text-decoration: none;
-}
-
-.header {
-  font-size: 2em;
 }
 
 .right {
@@ -53,6 +47,8 @@ a {
 .button {
   background-color: $blue;
   border-radius: 5px;
+  border: 1px solid $grey;
+  color: #fff;
   display: block;
   margin: 10px;
   padding: 20px;
