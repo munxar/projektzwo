@@ -1,42 +1,41 @@
 <!DOCTYPE html>
 <html lang="en" ng-cloak>
 <head>
-    <meta charset="UTF-8">
-    <title></title>
-    <!-- system js module loader -->
-    <script src="lib/system.js/dist/system.js"></script>
-    <!-- system js configuration -->
-    <script src="config.js"></script>
-    <!-- needed for ng-cloal -->
-    <link rel="stylesheet" href="lib/angular/angular-csp.css">
-    <!-- out style sheets -->
-    <link rel="stylesheet" href="lib/angular-material/angular-material.min.css">
-    <link rel="stylesheet" href="src/style.css">
+  <meta charset="UTF-8">
+  <title></title>
+  <!-- system js module loader -->
+  <script src="lib/system.js/dist/system.js"></script>
+  <!-- system js configuration -->
+  <script src="config.js"></script>
+  <!-- needed for ng-cloal -->
+  <link rel="stylesheet" href="lib/angular/angular-csp.css">
+  <!-- out style sheets -->
+  <link rel="stylesheet" href="lib/angular-material/angular-material.min.css">
+  <link rel="stylesheet" href="src/style.css">
 </head>
-<body ng-controller="AppCtrl as ctrl">
-    <header>
-        <div class="menu">
-            <a href="#" class="item active">sudo su</a>
-
-            <div class="right menu">
-                <a href="#" class="item">Register</a> | 
-                <a href="#" class="item">Login</a>
-            </div>
-        </div>
-    </header>
-    <main>
-        <div class="container">
-          <h1>Welcome to sudo su</h1>
-          <ul class="menu">
-              <li class="button">Single Player</li>
-              <li class="button">Multi Player</li>
-          </ul>
-        </div>
-    </main>
-
-    <!-- load our app -->
-    <script>
-        System.import("src/main");
-    </script>
+<body ng-controller="AppCtrl as ctrl" layout="column" layout-align="top center">
+  <header>
+    <md-toolbar>
+      <div class="md-toolbar-tools">
+        <span class="md-flex">sudo su</span>
+      </div>
+    </md-toolbar>
+  </header>
+  <md-content layout="column" layout-align"center center">
+    <div class="app-content">
+      <h1>Welcome to sudo su</h1>
+      <md-card>
+        <p>Play sudo su against your friend for free!</p>
+      </md-card>
+      <md-button class="md-raised md-primary">Raised Button</md-button>
+    </div>
+  </md-content>
+  
+  <!-- load our app -->
+  <script>
+    System.import("src/main");
+  </script>
+  <script src="lib/angular-animate/angular-animate.min.js"></script>
+  <script src="lib/angular-aria/angular-aria.min.js"></script>
 </body>
 </html>

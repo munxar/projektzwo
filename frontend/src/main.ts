@@ -1,5 +1,6 @@
 /// <reference path="../../typings/tsd.d.ts"/>
 import * as angular from "angular";
+import * as material from "angular-material";
 import {AppController} from "./AppController";
 
 // define app module

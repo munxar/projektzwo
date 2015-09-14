@@ -1,5 +1,6 @@
 
 /// <reference path="angularjs/angular.d.ts" />
+/// <reference path="angular-material/angular-material.d.ts" />
 /// <reference path="express/express.d.ts" />
 /// <reference path="mime/mime.d.ts" />
 /// <reference path="mongoose/mongoose.d.ts" />
