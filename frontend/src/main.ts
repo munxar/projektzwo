@@ -5,9 +5,9 @@ import "angular-material";
 import {AppController} from "./AppController";
 
 // define app module and dependencies
-angular.module("App", ["ngMaterial"])
+var app = angular.module("App", ["ngMaterial"])
     .controller("AppCtrl", AppController)
 ;
 
 // bootstrap the application
-angular.bootstrap(document, ["App"]);
+angular.bootstrap(document, [app.name]);
