@@ -1,6 +1,6 @@
 var gulp = require("gulp");
 var browserSync = require("browser-sync").create();
-var proxyMiddleware = require("http-proxy-middleware");
+
 var ts = require("gulp-typescript");
 var sass = require("gulp-sass");
 var less = require("gulp-less");
@@ -45,16 +45,10 @@ function backend() {
 var server = backend();
 
 gulp.task("serve", ["build:back", "api", "build:front", "build:sass"], function(done) {
-    var proxy = proxyMiddleware(config.api, { target: "http://127.0.0.1:" + config.port });
 
-    //server.restart();
-
-    // start browser sync server but redirect /api to backend
+    // start browser sync proxy and redirect to our backend
     browserSync.init({
-        server: {
-            baseDir: baseDir,
-            middleware: [proxy]
-        }
+        proxy: "http://127.0.0.1:" + config.port
     });
 
     done();
