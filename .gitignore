@@ -1,6 +1,8 @@
 # Logs
 logs
 *.log
+.DS_Store
+.idea
 
 # Runtime data
 pids
@@ -12,9 +14,6 @@ lib-cov
 
 # Coverage directory used by tools like istanbul
 coverage
-
-# Grunt intermediate storage (http://gruntjs.com/creating-plugins#storing-task-files)
-.grunt
 
 # node-waf configuration
 .lock-wscript
@@ -29,6 +28,4 @@ frontend/lib
 frontend/src/**/*.js
 frontend/src/**/*.css
 backend/**/*.js
-.idea
-
 
