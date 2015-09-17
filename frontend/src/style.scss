@@ -4,13 +4,18 @@ body {
   background-color: $background;
 }
 
-main {
-  margin: 10px;
+md-content {
+  padding: 20px;
 
   @media (min-width: 600px) {
     margin: 0 auto;
     width: 900px;
   }
+}
+
+a {
+  color: #fff;
+  text-decoration: none;
 }
 
 h1 {
@@ -34,5 +39,6 @@ header {
 
   md-card {
     background-color: #fff;
+    padding: 15px;
   }
 }
