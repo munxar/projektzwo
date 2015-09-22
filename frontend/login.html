@@ -14,11 +14,14 @@
 
 </head>
 <body ng-controller="AppCtrl as ctrl" layout="column" layout-align="top center">
-  <header>
-    <md-toolbar>
-      <div class="md-toolbar-tools">
-        <span class="md-flex"><a href="/">sudo su</a></span>
-      </div>
+  <header layout="column" layout-align="top center">
+    <md-toolbar class="md-toolbar-tools">
+      <md-button aria-label="Back">
+        back
+      </md-button>
+      <span class="md-flex uppercase">
+        <a href="/">sudo su</a>
+      </span>
     </md-toolbar>
   </header>
   <md-content layout="column" layout-align="center center">

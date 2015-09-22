@@ -16,21 +16,21 @@
 <body ng-controller="AppCtrl as ctrl" layout="column" layout-align="top center">
   <header>
     <md-toolbar>
-      <div class="md-toolbar-tools">
-        <span class="md-flex">sudo su</span>
+      <div class="md-toolbar-tools" layout="column" layout-align="center center">
+        <span class="md-flex uppercase">Welcome to</span>
       </div>
     </md-toolbar>
   </header>
-  <md-content layout="column" layout-align="center center" class="app-content">
-    <md-card>
-      <h1>Welcome to sudo su</h1>
+  <md-content layout="column" layout-align="center center">
+    <main class="app-content" layout="column" layout-align="center center">
+      <h1 class="uppercase">sudo su</h1>
       <p>Play sudo su against your friend for free!</p>
-      <section layout="column" layout-align="center center">
-        <md-button class="md-raised md-primary"><a href="single.html">Single Player</a></md-button>
-        <md-button class="md-raised md-primary"><a href="login.html">Multi Player</a></md-button>
-        <md-button class="md-raised md-primary"><a href="about.html">About</a></md-button>
+      <section class="main-nav">
+        <a href="single.html"><md-button class="md-primary md-raised">Single Player</md-button></a>
+        <a href="login.html"><md-button class="md-primary md-raised">Multi Player</md-button></a>
+        <a href="about.html"><md-button class="md-primary md-raised">About</md-button></a>
       </section>
-    </md-card>
+    </main>
   </md-content>
   <!-- load our app -->
   <script>System.import("src/main")</script>

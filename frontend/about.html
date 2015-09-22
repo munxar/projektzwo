@@ -14,22 +14,27 @@
 
 </head>
 <body ng-controller="AppCtrl as ctrl" layout="column" layout-align="top center">
-  <header>
-    <md-toolbar>
-      <div class="md-toolbar-tools">
-        <span class="md-flex"><a href="/">sudo su</a></span>
-      </div>
+  <header layout="column" layout-align="top center">
+    <md-toolbar class="md-toolbar-tools">
+      <md-button aria-label="Back">
+        back
+      </md-button>
+      <span class="md-flex uppercase">
+        <a href="/">sudo su</a>
+      </span>
     </md-toolbar>
   </header>
-  <md-content layout="column" layout-align="center center" class="app-content">
-    <h1>About sudo su</h1>
-    <section layout="column" layout-align="center center">
-      <p>Author<br>
-      Sascha Aeppli<br>
-      Dennis Garrn<br>
-      HSR
-      </p>
-    </section>
+  <md-content layout="column" layout-align="center center">
+    <main class="app-content" layout="column" layout-align="center center">
+      <h1>About sudo su</h1>
+      <section layout="column" layout-align="center center">
+        <p>Author<br>
+        Sascha Aeppli<br>
+        Dennis Garrn<br>
+        HSR
+        </p>
+      </section>
+    </main>
   </md-content>
 
   <!-- load our app -->

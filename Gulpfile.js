@@ -84,16 +84,6 @@ gulp.task("build:sass", function() {
         .pipe(gulp.dest(frontendSrc));
 });
 
-gulp.task("build:semantic", function() {
-    return gulp.src(baseDir + "/semantic-ui/semantic.less")
-        .pipe(autoprefixer({
-            browser: ["last 2 versions", "IE 9", "> 5%", "Firefox ESR"],
-            cascade: false
-        }))
-        .pipe(less())
-        .pipe(gulp.dest(baseDir+ "/semantic-ui"));
-});
-
 // watch typescript
 gulp.task("watch", ["build:back", "build:front", "build:sass"], function() {
 

@@ -1,29 +1,15 @@
-@import 'globals';
-
-body {
-  background-color: $background;
-}
+@import 'includes/globals';
 
 md-content {
   padding: 20px;
-
-  @media (min-width: 600px) {
-    margin: 0 auto;
-    width: 900px;
-  }
 }
 
-a {
+.uppercase {
+  text-transform: uppercase;
+}
+
+.md-primary a {
   color: #fff;
-  text-decoration: none;
-}
-
-h1 {
-  color: $red;
-}
-
-p {
-  padding: 20px;
 }
 
 header {
@@ -33,12 +19,38 @@ header {
   }
 }
 
+.md-primary {
+  height: 50px;
+  margin: 10px;
+  width: 90%;
+
+  @media (min-width: 600px) {
+    width: 80%;
+  }
+}
+
 .app-content {
-  padding: 10px 30px 20px 25px;
+  padding: 10px 20px 20px 25px;
   width: 100%;
 
-  md-card {
-    background-color: #fff;
-    padding: 15px;
+  @media (min-width: 600px) {
+    width: 900px;
+  }
+}
+
+footer {
+  background-color: #fff;
+  bottom: 10px;
+  position: absolute;
+
+  nav {
+    display: flex;
+    flex-flow: space-between;
+    width: 100vw;
+
+    a {
+      flex: 1;
+      padding: 10px;
+    }
   }
 }
