@@ -1,38 +1,20 @@
 <!DOCTYPE html>
-<html lang="en" ng-cloak>
+<html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title></title>
+  <title>sudosu</title>
+</head>
+<body>
+  <!-- main view content -->
+  <ui-view>
+    <span>loading...</span>
+  </ui-view>
+
   <!-- system js module loader -->
-  <script src="lib/system.js/dist/system.js"></script>
+  <script src="lib/system.js"></script>
   <!-- system js configuration -->
   <script src="config.js"></script>
-
-  <link rel="stylesheet" href="lib/angular/angular-csp.css">
-  <link rel="stylesheet" href="lib/angular-material/angular-material.min.css">
-  <link rel="stylesheet" href="src/style.css">
-
-</head>
-<body ng-controller="AppCtrl as ctrl" layout="column" layout-align="top center">
-  <header>
-    <md-toolbar>
-      <div class="md-toolbar-tools" layout="column" layout-align="center center">
-        <span class="md-flex uppercase">Welcome to</span>
-      </div>
-    </md-toolbar>
-  </header>
-  <md-content layout="column" layout-align="center center">
-    <main class="app-content" layout="column" layout-align="center center">
-      <h1 class="uppercase">sudo su</h1>
-      <p>Play sudo su against your friend for free!</p>
-      <section class="main-nav">
-        <a href="single.html"><md-button class="md-primary md-raised">Single Player</md-button></a>
-        <a href="login.html"><md-button class="md-primary md-raised">Multi Player</md-button></a>
-        <a href="about.html"><md-button class="md-primary md-raised">About</md-button></a>
-      </section>
-    </main>
-  </md-content>
   <!-- load our app -->
-  <script>System.import("src/main")</script>
+  <script>System.import("app/main")</script>
 </body>
 </html>

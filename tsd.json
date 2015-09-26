@@ -6,7 +6,7 @@
   "bundle": "typings/tsd.d.ts",
   "installed": {
     "angularjs/angular.d.ts": {
-      "commit": "8f51d25ad3523cd01f2d92e343247852f6b70dff"
+      "commit": "54f064352a3615443f7bff4198078db15e28247b"
     },
     "mime/mime.d.ts": {
       "commit": "8f51d25ad3523cd01f2d92e343247852f6b70dff"
@@ -24,7 +24,7 @@
       "commit": "8f51d25ad3523cd01f2d92e343247852f6b70dff"
     },
     "jquery/jquery.d.ts": {
-      "commit": "8f51d25ad3523cd01f2d92e343247852f6b70dff"
+      "commit": "54f064352a3615443f7bff4198078db15e28247b"
     },
     "morgan/morgan.d.ts": {
       "commit": "581563c4684d405afec14260ba79a89a52666c09"
@@ -34,6 +34,9 @@
     },
     "mocha/mocha.d.ts": {
       "commit": "581563c4684d405afec14260ba79a89a52666c09"
+    },
+    "angular-ui-router/angular-ui-router.d.ts": {
+      "commit": "54f064352a3615443f7bff4198078db15e28247b"
     }
   }
 }

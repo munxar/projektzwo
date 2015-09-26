@@ -11,7 +11,7 @@ var del = require("del");
 var spawn = require("child_process").spawn;
 var config = require("./config");
 var baseDir = "./frontend";
-var frontendSrc = "frontend/src/";
+var frontendSrc = "frontend/app/";
 var backendSrc = "backend/";
 
 var tsFrontend = ts.createProject({
