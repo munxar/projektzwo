@@ -1,12 +1,30 @@
 <md-toolbar layout="column">
-  <div class="md-toolbar-tools">
-    <span class="uppercase">sudosu</span>
-  </div>
+    <div class="md-toolbar-tools">
+        <span class="uppercase">sudosu</span>
+        <span flex></span>
+        <md-button>login</md-button>
+    </div>
 </md-toolbar>
 
-<md-content layout="column">
-    <md-button ui-sref="single" class="md-raised">Single Player</md-button>
-    <md-button ui-sref="multi" class="md-raised">Multi Player</md-button>
-    <md-button ui-sref="about" class="md-raised">About</md-button>
+<md-content layout="row" layout-align="center">
+    <md-content layout="column">
+        <md-button ui-sref="single" class="md-raised">
+            Single Player
+        </md-button>
+        <md-button ui-sref="multi" class="md-raised" ng-disabled="true" >
+            Multi Player
+            <md-tooltip md-direction="right">
+                Members Only
+            </md-tooltip>
+        </md-button>
+        <md-button href="" class="md-raised" ng-disabled="true" >
+            Settings
+            <md-tooltip md-direction="right">
+                Members Only
+            </md-tooltip>
+        </md-button>
+
+        <md-button ui-sref="about" class="md-raised">About</md-button>
+    </md-content>
 </md-content>
 
