@@ -14,6 +14,13 @@ export function config($stateProvider:ng.ui.IStateProvider, $urlRouterProvider:n
     }).state("single", {
         parent: "base",
         url: "/single",
+        controller: function() {
+            this.cells = [];
+            for(var i=0; i<81; i++) {
+                this.cells.push({ title: i%9 });
+            }
+        },
+        controllerAs: "ctrl",
         templateUrl: "app/single/single.html"
     }).state("multi", {
         parent: "base",
