@@ -9,19 +9,19 @@
       "commit": "54f064352a3615443f7bff4198078db15e28247b"
     },
     "mime/mime.d.ts": {
-      "commit": "8f51d25ad3523cd01f2d92e343247852f6b70dff"
+      "commit": "30387ec3dd6eb426cc48522fd3aef09ada83aa48"
     },
     "serve-static/serve-static.d.ts": {
-      "commit": "8f51d25ad3523cd01f2d92e343247852f6b70dff"
+      "commit": "30387ec3dd6eb426cc48522fd3aef09ada83aa48"
     },
     "mongoose/mongoose.d.ts": {
       "commit": "8f51d25ad3523cd01f2d92e343247852f6b70dff"
     },
     "node/node.d.ts": {
-      "commit": "8f51d25ad3523cd01f2d92e343247852f6b70dff"
+      "commit": "30387ec3dd6eb426cc48522fd3aef09ada83aa48"
     },
     "express/express.d.ts": {
-      "commit": "8f51d25ad3523cd01f2d92e343247852f6b70dff"
+      "commit": "30387ec3dd6eb426cc48522fd3aef09ada83aa48"
     },
     "jquery/jquery.d.ts": {
       "commit": "54f064352a3615443f7bff4198078db15e28247b"
@@ -37,6 +37,21 @@
     },
     "angular-ui-router/angular-ui-router.d.ts": {
       "commit": "54f064352a3615443f7bff4198078db15e28247b"
+    },
+    "superagent/superagent.d.ts": {
+      "commit": "30387ec3dd6eb426cc48522fd3aef09ada83aa48"
+    },
+    "supertest/supertest.d.ts": {
+      "commit": "30387ec3dd6eb426cc48522fd3aef09ada83aa48"
+    },
+    "body-parser/body-parser.d.ts": {
+      "commit": "30387ec3dd6eb426cc48522fd3aef09ada83aa48"
+    },
+    "mongodb/mongodb.d.ts": {
+      "commit": "30387ec3dd6eb426cc48522fd3aef09ada83aa48"
+    },
+    "bcrypt/bcrypt.d.ts": {
+      "commit": "30387ec3dd6eb426cc48522fd3aef09ada83aa48"
     }
   }
 }
