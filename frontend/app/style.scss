@@ -55,3 +55,14 @@ footer {
     }
 }
 
+.ng-enter, .ng-leave { width: 100%; position: absolute; }
+.ng-enter {
+    -webkit-animation: bounceInRight 1.0s both ease-in;
+    -moz-animation: bounceInRight 1.0s both ease-in;
+    animation: bounceInRight 1.0s both ease-in;
+}
+.ng-leave {
+    -webkit-animation: bounceOutLeft 0.8s both ease-in;
+    -moz-animation: bounceOutLeft 0.8s both ease-in;
+    animation: bounceOutLeft 0.8s both ease-in;
+}
