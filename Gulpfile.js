@@ -37,7 +37,7 @@ function backend() {
                 server.kill("SIGKILL");
             }
             // spawn backend process, redirect stdio to gulp process
-            server = spawn('node', [backendSrc + "src/main.js"], { stdio: 'inherit' });
+            server = spawn('node', [backendSrc + "src/server.js"], { stdio: 'inherit' });
         }
     };
 }

@@ -10,7 +10,7 @@ api.get("/", (req, res) => {
 
 api.post("/auth/login", (req, res, next) => {
 
-    User.findOne({ username: req.body.username }).then(user => {
+    User.findOne({ username: req.body.username }).exec().then(user => {
         if(user == null) return res.status(400).json({});
         user.comparePassword(req.body.password, (err, isMatch) => {
             if(err) return next(err);
