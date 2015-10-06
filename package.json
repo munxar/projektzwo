@@ -33,9 +33,13 @@
     "typescript": "^1.5.3"
   },
   "dependencies": {
+    "bcrypt": "^0.8.5",
+    "body-parser": "^1.14.1",
     "express": "^4.13.1",
     "jspm": "^0.16.10",
-    "morgan": "^1.6.1"
+    "mongoose": "^4.1.9",
+    "morgan": "^1.6.1",
+    "supertest": "^1.1.0"
   },
   "jspm": {
     "directories": {
