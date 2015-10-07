@@ -67,6 +67,15 @@ describe("sudosu.api", function() {
         ;
     });
 
+    it("api/secure post returns 401 if no token is present", done => {
+        agent(app)
+            .post("/api/secure")
+            .expect(401)
+            .end((err) => {
+                done(err);
+            })
+        ;
+    });
 
 });
 

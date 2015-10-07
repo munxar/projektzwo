@@ -18,7 +18,7 @@
       "commit": "8f51d25ad3523cd01f2d92e343247852f6b70dff"
     },
     "node/node.d.ts": {
-      "commit": "30387ec3dd6eb426cc48522fd3aef09ada83aa48"
+      "commit": "98d3168c2c570352a3a7393788e2ec9fbb08ade6"
     },
     "express/express.d.ts": {
       "commit": "30387ec3dd6eb426cc48522fd3aef09ada83aa48"
@@ -52,6 +52,9 @@
     },
     "bcrypt/bcrypt.d.ts": {
       "commit": "30387ec3dd6eb426cc48522fd3aef09ada83aa48"
+    },
+    "jsonwebtoken/jsonwebtoken.d.ts": {
+      "commit": "98d3168c2c570352a3a7393788e2ec9fbb08ade6"
     }
   }
 }

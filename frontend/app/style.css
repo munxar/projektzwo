@@ -61,3 +61,15 @@ footer {
       -ms-flex: 1;
       flex: 1;
       padding: 10px; }
+
+.ng-enter, .ng-leave {
+  width: 100%;
+  position: absolute; }
+
+.ng-enter {
+  -webkit-animation: bounceInRight 1s both ease-in;
+  animation: bounceInRight 1s both ease-in; }
+
+.ng-leave {
+  -webkit-animation: bounceOutLeft 0.8s both ease-in;
+  animation: bounceOutLeft 0.8s both ease-in; }
