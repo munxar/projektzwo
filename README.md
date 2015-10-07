@@ -1,5 +1,5 @@
-# projektzwo
-DAS zweite Projekt
+# sudo su
+Awesome Sudoku Game
 
 ## Setup
 
