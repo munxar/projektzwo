@@ -31,3 +31,4 @@ function config($stateProvider, $urlRouterProvider) {
     });
 }
 exports.config = config;
+//# sourceMappingURL=main.config.js.map

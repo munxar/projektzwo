@@ -1,0 +1,12 @@
+<div class="sudoku-grid">
+    <div ng-repeat="blockrow in ctrl.blockrows">
+        <div ng-repeat="block in blockrow">
+            <div ng-repeat="row in block.rows">
+                <div class="cell" ng-class="{'selected': ctrl.isSelected(cell) }" ng-click="ctrl.select(cell)" ng-repeat="cell in row" ng-focus="ctrl.onFocus(cell)">{{cell.value}}</div>
+            </div>
+        </div>
+    </div>
+    <div>
+        <div class="cell" ng-repeat="row in ctrl.rows" ng-click="ctrl.sel(row)">{{row.value}}</div>
+    </div>
+</div>

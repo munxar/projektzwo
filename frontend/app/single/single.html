@@ -9,27 +9,23 @@
 
 
 <div layout="flex" layout-align="center center">
-
-
     <style type="text/css">
-        /* change font size to change scale */
+
         .sudoku-grid {
             font-size: 24px;
+            border: solid black 2px;
         }
 
-        /* groups */
         .sudoku-grid > div > div {
             float: left;
 
             border: 1px solid black;
         }
 
-        /* rows */
         .sudoku-grid > div, .sudoku-grid > div > div > div {
             clear: left;
         }
 
-        /* cells */
         .sudoku-grid > div > div > div > div {
             float: left;
             width: 1.3em;
@@ -42,7 +38,6 @@
             line-height: 1.3em;
         }
 
-        /* outer border tweaks */
         .sudoku-grid > div > div:first-child {
             border-left: 2px solid black;
         }
@@ -59,7 +54,6 @@
             border-bottom: 2px solid black;
         }
 
-        /* inner border tweaks */
         .sudoku-grid > div > div > div div:last-child {
             border-right: none;
         }
@@ -67,169 +61,22 @@
         .sudoku-grid > div > div > div:last-child div {
             border-bottom: none;
         }
+
+        .cell {
+            cursor: default;
+            text-align: center;
+            width: 1.2em;
+            height: 1.2em;
+            border: solid lightgrey 1px;
+        }
+
+        .cell.selected {
+            background: lightgrey;
+            outline: 0;
+            border: solid grey 1px;
+        }
     </style>
 
-
-    <div class="sudoku-grid">
-        <div>
-            <div>
-                <div>
-                    <div>5</div>
-                    <div>3</div>
-                    <div></div>
-                </div>
-                <div>
-                    <div>6</div>
-                    <div></div>
-                    <div></div>
-                </div>
-                <div>
-                    <div></div>
-                    <div>9</div>
-                    <div>8</div>
-                </div>
-            </div>
-            <div>
-                <div>
-                    <div></div>
-                    <div>7</div>
-                    <div></div>
-                </div>
-                <div>
-                    <div>1</div>
-                    <div>9</div>
-                    <div>5</div>
-                </div>
-                <div>
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                </div>
-            </div>
-            <div>
-                <div>
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                </div>
-                <div>
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                </div>
-                <div>
-                    <div></div>
-                    <div>6</div>
-                    <div></div>
-                </div>
-            </div>
-        </div>
-        <div>
-            <div>
-                <div>
-                    <div>8</div>
-                    <div></div>
-                    <div></div>
-                </div>
-                <div>
-                    <div>4</div>
-                    <div></div>
-                    <div></div>
-                </div>
-                <div>
-                    <div>7</div>
-                    <div></div>
-                    <div></div>
-                </div>
-            </div>
-            <div>
-                <div>
-                    <div></div>
-                    <div>6</div>
-                    <div></div>
-                </div>
-                <div>
-                    <div>8</div>
-                    <div></div>
-                    <div>3</div>
-                </div>
-                <div>
-                    <div></div>
-                    <div>2</div>
-                    <div></div>
-                </div>
-            </div>
-            <div>
-                <div>
-                    <div></div>
-                    <div></div>
-                    <div>3</div>
-                </div>
-                <div>
-                    <div></div>
-                    <div></div>
-                    <div>1</div>
-                </div>
-                <div>
-                    <div></div>
-                    <div></div>
-                    <div>6</div>
-                </div>
-            </div>
-        </div>
-        <div>
-            <div>
-                <div>
-                    <div></div>
-                    <div>6</div>
-                    <div></div>
-                </div>
-                <div>
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                </div>
-                <div>
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                </div>
-            </div>
-            <div>
-                <div>
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                </div>
-                <div>
-                    <div>4</div>
-                    <div>1</div>
-                    <div>9</div>
-                </div>
-                <div>
-                    <div></div>
-                    <div>8</div>
-                    <div></div>
-                </div>
-            </div>
-            <div>
-                <div>
-                    <div>2</div>
-                    <div>8</div>
-                    <div></div>
-                </div>
-                <div>
-                    <div></div>
-                    <div></div>
-                    <div>5</div>
-                </div>
-                <div>
-                    <div></div>
-                    <div>7</div>
-                    <div>9</div>
-                </div>
-            </div>
-        </div>
-    </div>
+    <grid></grid>
 
 </div>
