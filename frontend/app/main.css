@@ -1,6 +1,9 @@
 /**
  * Fancy colors for sudo su
  */
+/** 
+ * Variables for Grid
+ */
 body {
   background-color: #434e5a;
   position: relative; }
@@ -9,13 +12,78 @@ a {
   text-decoration: none; }
 
 h1 {
-  color: #ff4252; }
+  color: #e74c3c; }
 
 p {
   padding: 20px 0; }
+
+.sudoku-grid {
+  margin-top: 28px;
+  font-size: 24px;
+  border: 2px solid #545f68;
+  background: #dbdcdd; }
+  .sudoku-grid div div {
+    float: left;
+    border: 1px solid #545f68; }
+  .sudoku-grid > div,
+  .sudoku-grid > div > div > div {
+    clear: left; }
+
+.sudoku-grid > div > div > div > div {
+  float: left;
+  width: 1.3em;
+  height: 1.3em;
+  border-right: 1px solid #545f68;
+  border-bottom: 1px solid #545f68;
+  text-align: center;
+  line-height: 1.3em; }
+  @media (min-width: 600px) {
+    .sudoku-grid > div > div > div > div {
+      width: 1.5em;
+      height: 1.5em;
+      line-height: 1.5em; } }
+
+.sudoku-grid > div > div > div div:last-child {
+  border-right: none; }
+
+.sudoku-grid > div > div > div:last-child div {
+  border-bottom: none; }
+
+.cell {
+  cursor: pointer; }
+  .cell.selected {
+    transition: background 0.5s ease;
+    background: #c2c4c6;
+    outline: 0;
+    color: #00aca6; }
+
+.blockrow {
+  border: 1px solid #545f68; }
+
+.controls .cell {
+  text-align: center;
+  width: 1.2em;
+  height: 1.2em;
+  background: #00aca6;
+  color: #faf7f7; }
 
 .uppercase {
   text-transform: uppercase; }
 
 .md-toolbar-tools {
-  background-color: #353044; }
+  background-color: #3d454c; }
+
+/*
+.ng-enter, .ng-leave { width: 100%; position: absolute; }
+.ng-enter {
+    -webkit-animation: bounceInRight 1.0s both ease-in;
+    -moz-animation: bounceInRight 1.0s both ease-in;
+    animation: bounceInRight 1.0s both ease-in;
+}
+.ng-leave {
+    -webkit-animation: bounceOutLeft 0.8s both ease-in;
+    -moz-animation: bounceOutLeft 0.8s both ease-in;
+    animation: bounceOutLeft 0.8s both ease-in;
+}
+
+*/

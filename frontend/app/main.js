@@ -86,4 +86,3 @@ angular
 })
     .config(main_config_1.config);
 angular.bootstrap(document, ["App"]);
-//# sourceMappingURL=main.js.map

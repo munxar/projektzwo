@@ -30,5 +30,9 @@ export function config($stateProvider:ng.ui.IStateProvider, $urlRouterProvider:n
         parent: "base",
         url: "/about",
         templateUrl: "app/about/about.html"
+    }).state("login", {
+        parent: "base",
+        url: "/login",
+        templateUrl: "app/login/login.html"
     })
 }
