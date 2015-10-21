@@ -1,18 +1,20 @@
-<md-toolbar layout="column">
-    <div class="md-toolbar-tools">
-        <md-button class="md-button" ui-sref="home">
-            <md-icon md-font-icon="material-icons">chevron_left</md-icon>
-            <span class="md-raised">single player</span>
-        </md-button>
+<md-toolbar class="page">
+    <div class="md-toolbar-tools" layout="row">
+        <div class="back" flex="33">
+            <md-button class="md-button" ui-sref="home">
+                <md-icon md-font-icon="material-icons">chevron_left</md-icon>
+                <span class="md-raised">single player</span>
+            </md-button>
+        </div>
+        <scorebord flex="33">
+            <score>17 <md-icon md-font-icon="material-icons">grade</md-icon></score>
+            <time>2:00 <md-icon md-font-icon="material-icons">query_builder</md-icon></time>
+        </scorebord>
     </div>
 </md-toolbar>
 
 <div layout="flex" layout-align="center">
 
-    <scorebord>
-        <score>17 <md-icon md-font-icon="material-icons">grade</md-icon></score>
-        <time>2:00 <md-icon md-font-icon="material-icons">query_builder</md-icon></time>
-    </scorebord>
     <grid></grid>
 
 </div>

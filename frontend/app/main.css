@@ -70,8 +70,17 @@ p {
 .uppercase {
   text-transform: uppercase; }
 
-.md-toolbar-tools {
+md-toolbar.home {
   background-color: #3d454c; }
+
+md-toolbar.page {
+  background-color: #faf7f7;
+  color: #000; }
+  md-toolbar.page .flex:not(.back) {
+    text-align: center; }
+  md-toolbar.page .md-button,
+  md-toolbar.page md-icon {
+    color: #000; }
 
 /*
 .ng-enter, .ng-leave { width: 100%; position: absolute; }

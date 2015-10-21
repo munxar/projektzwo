@@ -4,8 +4,22 @@
     text-transform: uppercase;
 }
 
-.md-toolbar-tools {
+ md-toolbar.home {
     background-color: $dark-blue;
+}
+
+md-toolbar.page {
+  background-color: $white;
+  color: #000;
+
+  .flex:not(.back){
+    text-align: center;
+  }
+
+  .md-button,
+  md-icon {
+    color: #000;
+  }
 }
 
 
