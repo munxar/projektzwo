@@ -4,24 +4,31 @@
     text-transform: uppercase;
 }
 
- md-toolbar.home {
-    background-color: $dark-blue;
+md-toolbar {
+    margin-bottom: 28px;
+
+    &.home {
+        background-color: $dark-blue;
+    }
+
+    &.page {
+        background-color: $white;
+        color: #000;
+
+        .flex:not(.back):not(.close){
+            text-align: center;
+        }
+
+        .close {
+            text-align: right;
+        }
+
+        .md-button,
+        md-icon {
+            color: #000;
+        }
+    }
 }
-
-md-toolbar.page {
-  background-color: $white;
-  color: #000;
-
-  .flex:not(.back){
-    text-align: center;
-  }
-
-  .md-button,
-  md-icon {
-    color: #000;
-  }
-}
-
 
 /*
 .ng-enter, .ng-leave { width: 100%; position: absolute; }
@@ -35,5 +42,4 @@ md-toolbar.page {
     -moz-animation: bounceOutLeft 0.8s both ease-in;
     animation: bounceOutLeft 0.8s both ease-in;
 }
-
 */

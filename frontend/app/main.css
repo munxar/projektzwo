@@ -18,7 +18,6 @@ p {
   padding: 20px 0; }
 
 .sudoku-grid {
-  margin-top: 28px;
   font-size: 24px;
   border: 2px solid #545f68;
   background: #dbdcdd; }
@@ -70,17 +69,20 @@ p {
 .uppercase {
   text-transform: uppercase; }
 
-md-toolbar.home {
-  background-color: #3d454c; }
-
-md-toolbar.page {
-  background-color: #faf7f7;
-  color: #000; }
-  md-toolbar.page .flex:not(.back) {
-    text-align: center; }
-  md-toolbar.page .md-button,
-  md-toolbar.page md-icon {
+md-toolbar {
+  margin-bottom: 28px; }
+  md-toolbar.home {
+    background-color: #3d454c; }
+  md-toolbar.page {
+    background-color: #faf7f7;
     color: #000; }
+    md-toolbar.page .flex:not(.back):not(.close) {
+      text-align: center; }
+    md-toolbar.page .close {
+      text-align: right; }
+    md-toolbar.page .md-button,
+    md-toolbar.page md-icon {
+      color: #000; }
 
 /*
 .ng-enter, .ng-leave { width: 100%; position: absolute; }
@@ -94,5 +96,4 @@ md-toolbar.page {
     -moz-animation: bounceOutLeft 0.8s both ease-in;
     animation: bounceOutLeft 0.8s both ease-in;
 }
-
 */
