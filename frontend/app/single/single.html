@@ -1,83 +1,24 @@
-<md-toolbar layout="column">
-    <div class="md-toolbar-tools">
-        <md-button class="md-icon-button" ui-sref="home">
-            <md-icon md-font-icon="material-icons">chevron_left</md-icon>
-        </md-button>
-        <span class="md-raised">single player</span>
+<md-toolbar class="page">
+    <div class="md-toolbar-tools" layout="row">
+        <div class="back" flex="33">
+            <md-button class="md-button" ui-sref="home">
+                <md-icon md-font-icon="material-icons">chevron_left</md-icon>
+                <span class="md-raised">Back</span>
+            </md-button>
+        </div>
+        <scorebord flex="33">
+            <score>17 <md-icon md-font-icon="material-icons">grade</md-icon></score>
+            <time>2:00 <md-icon md-font-icon="material-icons">query_builder</md-icon></time>
+        </scorebord>
+        <div class="close" flex="33">
+            <md-button class="md-button">
+            <md-icon md-font-icon="material-icons">close</md-icon>
+        </div>
     </div>
 </md-toolbar>
 
 
-<div layout="flex" layout-align="center center">
-    <style type="text/css">
-
-        .sudoku-grid {
-            font-size: 24px;
-            border: solid black 2px;
-        }
-
-        .sudoku-grid > div > div {
-            float: left;
-
-            border: 1px solid black;
-        }
-
-        .sudoku-grid > div, .sudoku-grid > div > div > div {
-            clear: left;
-        }
-
-        .sudoku-grid > div > div > div > div {
-            float: left;
-            width: 1.3em;
-            height: 1.3em;
-
-            border-right: 1px solid lightgrey;
-            border-bottom: 1px solid lightgrey;
-
-            text-align: center;
-            line-height: 1.3em;
-        }
-
-        .sudoku-grid > div > div:first-child {
-            border-left: 2px solid black;
-        }
-
-        .sudoku-grid > div > div:last-child {
-            border-right: 2px solid black;
-        }
-
-        .sudoku-grid > div:first-child > div {
-            border-top: 2px solid black;
-        }
-
-        .sudoku-grid > div:last-child > div {
-            border-bottom: 2px solid black;
-        }
-
-        .sudoku-grid > div > div > div div:last-child {
-            border-right: none;
-        }
-
-        .sudoku-grid > div > div > div:last-child div {
-            border-bottom: none;
-        }
-
-        .cell {
-            user-select: none;
-            -webkit-user-select: none;
-            cursor: default;
-            text-align: center;
-            width: 1.2em;
-            height: 1.2em;
-            border: solid lightgrey 1px;
-        }
-
-        .cell.selected {
-            background: lightgrey;
-            outline: 0;
-            border: solid grey 1px;
-        }
-    </style>
+<div layout="flex" layout-align="center">
 
     <grid></grid>
 

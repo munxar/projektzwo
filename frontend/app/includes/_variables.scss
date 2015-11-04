@@ -2,8 +2,19 @@
  * Fancy colors for sudo su
  */
 $blue: #353044;
+$dark-blue: #3d454c;
 $red: #ff4252;
-$very-light-grey: #f6f6f6;
-$grey: #999;
+$light-grey: #c2c4c6;
+$grey: #767575;
+$green: #00aca6;
+$white: #faf7f7;
+$red: #e74c3c;
 
 $background: #434e5a;
+
+/** 
+ * Variables for Grid
+ */
+$grid-background: #dbdcdd;
+$grid-error: lighten($red, 10%);
+$grid-border: lighten($dark-blue, 10%);

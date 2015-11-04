@@ -177,4 +177,3 @@ var GridController = (function () {
     return GridController;
 })();
 angular.bootstrap(document, ["App"]);
-//# sourceMappingURL=main.js.map

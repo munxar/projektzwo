@@ -1,0 +1,68 @@
+.sudoku-grid {
+    font-size: 24px;
+    border: 2px solid $grid-border;
+    background: $grid-background;
+
+    div div {
+        float: left;
+        border: 1px solid $grid-border;
+    }
+
+    > div,
+    > div > div > div {
+        clear: left;
+    }
+}
+
+
+.sudoku-grid > div > div > div > div {
+    float: left;
+    width: 1.3em;
+    height: 1.3em;
+
+    border-right: 1px solid $grid-border;
+    border-bottom: 1px solid $grid-border;
+
+    text-align: center;
+    line-height: 1.3em;
+
+    @media (min-width: 600px) {
+        width: 1.5em;
+        height: 1.5em;
+        line-height: 1.5em;
+    }
+}
+
+.sudoku-grid > div > div > div div:last-child {
+    border-right: none;
+}
+
+.sudoku-grid > div > div > div:last-child div {
+    border-bottom: none;
+}
+
+.cell {
+    cursor: pointer;
+
+    &.selected {
+        transition: background 0.5s ease;
+        background: $light-grey;
+        outline: 0;
+        color: $green;
+    }
+}
+
+.blockrow {
+    border: 1px solid $grid-border;
+}
+
+.controls {
+
+    .cell {
+        text-align: center;
+        width: 1.2em;
+        height: 1.2em;
+        background: $green;
+        color: $white;
+    }
+}

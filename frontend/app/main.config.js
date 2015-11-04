@@ -28,7 +28,10 @@ function config($stateProvider, $urlRouterProvider) {
         parent: "base",
         url: "/about",
         templateUrl: "app/about/about.html"
+    }).state("login", {
+        parent: "base",
+        url: "/login",
+        templateUrl: "app/login/login.html"
     });
 }
 exports.config = config;
-//# sourceMappingURL=main.config.js.map
