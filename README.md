@@ -4,12 +4,13 @@ Awesome Sudoku Game
 ## Setup
 
 You need the following binaries installed:
-* node
-* mongodb
+* [node](https://nodejs.org/)
+* [mongodb](https://docs.mongodb.org/manual/tutorial/install-mongodb-on-os-x/)
 
 Install the following npm tools globally
+```$
 npm install -g gulp tsd
-
+```
 
 ## Install Dependencies
 ```$
